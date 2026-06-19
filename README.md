@@ -62,14 +62,3 @@ Notes for instructors:
 - Rough timing per day: ~60% taught content, ~40% exercises. Day 5 is designed as a project day:
   the taught pipeline takes the morning, the project brief (bottom of the notebook) fills the
   afternoon, ending with presentations.
-
-## Regenerating the Notebooks
-
-These notebooks are assembled from the original `Workshop 1` and `Workshop 2` folders by
-`../build_summer_school.py`. To tweak the structure, edit that script and re-run:
-
-```bash
-python3 build_summer_school.py
-```
-
-Manual edits to the generated notebooks will be overwritten on the next build.
