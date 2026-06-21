@@ -1,8 +1,7 @@
-# Deep Learning Summer School — 5-Day Programme
+# Deep Learning Summer School - June 2026
 
 A hands-on, one-notebook-per-day course taking students from "what is a neuron?" to a complete,
-portfolio-ready anomaly detection project. Built from the original two Deep Learning workshops,
-extended with new material for days 2–5.
+portfolio-ready anomaly detection project.
 
 ## The Week at a Glance
 
@@ -17,7 +16,7 @@ extended with new material for days 2–5.
 Each day folder contains:
 
 - **One main notebook** (`Day_N_*.ipynb`) — the day's full teaching content, ending with a recap,
-  exercises and a teaser for the next day
+  exercises and a teaser for the next day. The equivalent (`Day_N_*.executed.ipynb`) contains the same but with outputs for each cell.
 - Supporting **images** referenced by the notebook (keep them next to the notebook)
 - An **`extras/`** folder with optional deep-dive notebooks where relevant
 
@@ -31,34 +30,3 @@ Each day folder contains:
 | Day 4 | `extras/lstm_output_dimensions_test.ipynb` | Layer-by-layer stacked-LSTM dimensions |
 | Day 5 | `extras/LSTM_AE_Hanoi_reference.ipynb` | The original Hanoi water-network study (its `Scenario-*.csv` data files are distributed separately) |
 | Day 5 | `extras/conv_lstm_output_dimensions_test.ipynb` | Conv + LSTM hybrid autoencoder dimensions |
-
-## Setup
-
-Python 3.10+ with:
-
-```bash
-pip install torch torchvision matplotlib numpy pandas seaborn scikit-learn ruptures jupyter
-```
-
-On the instructor machine, the right conda environment is `py312`:
-
-```bash
-conda activate py312
-```
-
-(`ruptures` is only needed for the optional change-point-detection section on Day 5.)
-
-Notes for instructors:
-
-- Datasets (MNIST on Days 1/2/5, CIFAR-10 on Day 3) download automatically into a `data/` folder
-  inside each day's directory on first run. To avoid classroom-WiFi pain, pre-seed each day folder
-  with a copy of the relevant `data/` directory (MNIST is in `Workshop 1/data`, CIFAR-10 in
-  `Workshop 2/data` of the original material).
-- Device selection is automatic: Apple Silicon (`mps`) → CUDA → CPU.
-- Day 3's transfer-learning cell downloads ResNet18 weights (~45 MB); the optional object-detection
-  cell downloads Faster R-CNN weights (~160 MB) and needs a user-supplied photo.
-- Day 5's capstone uses **simulated** water-network sensor data generated inside the notebook, so it
-  is fully self-contained; the original real-data version is in Day 5 `extras/`.
-- Rough timing per day: ~60% taught content, ~40% exercises. Day 5 is designed as a project day:
-  the taught pipeline takes the morning, the project brief (bottom of the notebook) fills the
-  afternoon, ending with presentations.
